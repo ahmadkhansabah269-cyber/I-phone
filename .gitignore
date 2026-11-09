@@ -1,0 +1,6 @@
+# Dependencies & System files
+stitch_apple_inspired_iphone_showcase_website/
+.system_generated/
+*.log
+.DS_Store
+Thumbs.db
