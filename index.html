@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>NovaPhone — The Ultimate iPhone Showcase & Buyer's Guide</title>
+  <meta content="Independent in-depth buyer's guide comparing iPhone 16 Pro Max, 16 Pro, 16 Plus, and 16 with benchmarks, cameras, and silicon architecture." name="description"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#f9f9fb",
+            "surface-dim": "#d9dadc",
+            "surface-bright": "#f9f9fb",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f3f3f5",
+            "surface-container": "#edeef0",
+            "surface-container-high": "#e8e8ea",
+            "surface-container-highest": "#e2e2e4",
+            "on-surface": "#1a1c1d",
+            "on-surface-variant": "#5e5e63",
+            "outline": "#717785",
+            "outline-variant": "#c1c6d6",
+            "primary": "#0059b5",
+            "primary-container": "#0071e3",
+            "primary-hover": "#0077ed",
+            "on-primary-container": "#ffffff",
+            "secondary": "#5e5e63",
+            "secondary-container": "#e0dfe4",
+            "tertiary": "#9b3f00",
+            "tertiary-container": "#c25100"
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          spacing: {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-2xl": "4rem",
+            "space-3xl": "6rem",
+            "margin": "1.25rem",
+            "margin-md": "2.5rem",
+            "margin-lg": "4rem"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9fb;
+        color: #1a1c1d;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+    .glass-nav {
+      background: rgba(249, 249, 251, 0.82);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+    .card-elevated {
+      background: #ffffff;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-elevated:hover {
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+      transform: translateY(-2px);
+    }
+    .color-swatch {
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .color-swatch:hover {
+      transform: scale(1.15);
+    }
+    .color-swatch.active {
+      outline: 2px solid #0071e3;
+      outline-offset: 2px;
+    }
+    .diff-dimmed {
+      opacity: 0.35 !important;
+      transition: opacity 0.2s ease;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-white">
+
+  <!-- TOP NAVIGATION BAR -->
+  <header class="fixed top-0 w-full z-50 glass-nav transition-all duration-200">
+    <div class="h-16 max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg flex items-center justify-between gap-space-md">
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-space-sm shrink-0 group">
+        <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-primary-container to-blue-400 flex items-center justify-center text-white shadow-sm shadow-blue-500/20 group-hover:scale-105 transition-transform">
+          <span class="material-symbols-outlined text-[20px]">phone_iphone</span>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-on-surface">NovaPhone</span>
+        <span class="px-2 py-0.5 rounded text-[11px] font-semibold tracking-wider uppercase bg-surface-container-high text-on-surface-variant">Guide</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden lg:flex items-center gap-space-lg text-sm font-medium text-on-surface-variant">
+        <a href="#models" class="hover:text-primary transition-colors">Models</a>
+        <a href="#compare" class="hover:text-primary transition-colors">Compare</a>
+        <a href="#technology" class="hover:text-primary transition-colors">Technology</a>
+        <a href="#faq" class="hover:text-primary transition-colors">Buyer's FAQ</a>
+      </nav>
+
+      <!-- Right CTAs -->
+      <div class="flex items-center gap-3">
+        <a href="#compare" class="hidden sm:inline-flex items-center justify-center bg-primary-container text-white text-sm font-medium px-4 py-2 rounded-full hover:bg-primary-hover transition-colors shadow-sm shadow-blue-500/20">
+          Compare Models
+        </a>
+        <a href="#models" class="inline-flex items-center justify-center bg-surface-container-high text-on-surface text-sm font-medium px-4 py-2 rounded-full hover:bg-surface-container-highest transition-colors">
+          Browse Lineup
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full pt-16">
+    <!-- HERO SECTION -->
+    <section class="relative w-full pt-16 pb-space-3xl px-margin md:px-margin-md lg:px-margin-lg overflow-hidden bg-gradient-to-b from-surface via-surface-container-lowest to-surface">
+      <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+        <!-- Pill Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-high/90 text-on-surface-variant text-xs font-semibold tracking-wide shadow-sm mb-space-lg">
+          <span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+          <span>2025 Flagship Lineup • Independent In-Depth Buyer's Guide</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-on-surface tracking-tight max-w-4xl mb-space-md">
+          Titanium. Precision. Power.
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mb-space-xl leading-relaxed">
+          The ultimate independent guide to choosing your next iPhone. Compare architectures, camera glass, battery life, and true performance across every model.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-space-2xl">
+          <a href="#models" class="inline-flex items-center justify-center bg-primary-container text-white font-medium px-8 py-3.5 rounded-full shadow-lg shadow-blue-500/25 hover:bg-primary-hover transition-all duration-200 transform hover:-translate-y-0.5">
+            Explore All Models
+          </a>
+          <a href="#compare" class="inline-flex items-center gap-2 bg-surface-container-high text-on-surface hover:text-primary font-medium px-6 py-3.5 rounded-full transition-all duration-200 hover:bg-surface-container-highest">
+            <span>Compare Specs</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+          </a>
+        </div>
+
+        <!-- Hero Showcase Visual -->
+        <div class="relative w-full max-w-5xl mt-4">
+          <!-- Floating Spec Badges -->
+          <div class="hidden md:flex absolute top-10 left-6 z-20 items-center gap-2 px-4 py-2 rounded-full bg-white/95 backdrop-blur-xl shadow-lg border border-black/5">
+            <span class="material-symbols-outlined text-primary-container text-[18px]">verified</span>
+            <span class="text-xs font-semibold text-on-surface">Grade 5 Titanium</span>
+          </div>
+          <div class="hidden md:flex absolute top-20 right-8 z-20 items-center gap-2 px-4 py-2 rounded-full bg-white/95 backdrop-blur-xl shadow-lg border border-black/5">
+            <span class="material-symbols-outlined text-tertiary-container text-[18px]">memory</span>
+            <span class="text-xs font-semibold text-on-surface">A18 Pro Silicon</span>
+          </div>
+          <div class="hidden md:flex absolute bottom-12 left-12 z-20 items-center gap-2 px-4 py-2 rounded-full bg-white/95 backdrop-blur-xl shadow-lg border border-black/5">
+            <span class="material-symbols-outlined text-primary-container text-[18px]">photo_camera</span>
+            <span class="text-xs font-semibold text-on-surface">48MP Quad-Pixel</span>
+          </div>
+
+          <!-- Hero Image -->
+          <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-black/5 bg-surface-container-lowest">
+            <img 
+              src="images/hero-titanium.png" 
+              alt="Titanium Flagship iPhone Floating Studio Photography" 
+              class="w-full h-auto object-cover max-h-[640px] mx-auto transition-transform duration-700 hover:scale-[1.01]"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-20 pointer-events-none"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: LATEST MODELS GRID -->
+    <section class="w-full py-space-3xl px-margin md:px-margin-md lg:px-margin-lg bg-surface" id="models">
+      <div class="max-w-7xl mx-auto">
+        <!-- Header & Filter Bar -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-primary">Current Generation</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-on-surface tracking-tight mt-1">
+              Meet the lineup.
+            </h2>
+            <p class="text-sm md:text-base text-on-surface-variant mt-1">
+              Engineered for power, pocketability, and pure performance.
+            </p>
+          </div>
+
+          <!-- Segmented Filter Control -->
+          <div class="inline-flex p-1 rounded-full bg-surface-container-high text-on-surface-variant text-xs font-medium self-start md:self-auto" id="filter-controls">
+            <button data-filter="all" class="filter-btn px-4 py-1.5 rounded-full bg-white text-on-surface shadow-sm font-semibold transition-all">All Phones</button>
+            <button data-filter="pro" class="filter-btn px-4 py-1.5 rounded-full hover:text-on-surface transition-all">Pro Line</button>
+            <button data-filter="standard" class="filter-btn px-4 py-1.5 rounded-full hover:text-on-surface transition-all">Standard</button>
+          </div>
+        </div>
+
+        <!-- 4-Card Responsive Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="models-grid">
+          
+          <!-- Card 1: iPhone 16 Pro Max -->
+          <div class="phone-card group flex flex-col justify-between p-6 rounded-3xl card-elevated" data-category="pro">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-2.5 py-1 rounded-full bg-blue-100 text-primary text-[11px] font-bold uppercase tracking-wider">Flagship</span>
+                <span class="text-xs font-semibold text-on-surface-variant">From $1,199</span>
+              </div>
+              <h3 class="text-xl font-bold text-on-surface mb-1">iPhone 16 Pro Max</h3>
+              <p class="text-xs text-on-surface-variant mb-6 leading-relaxed">The absolute pinnacle of battery life and telephoto range.</p>
+              
+              <div class="space-y-2 mb-6">
+                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container-low text-on-surface">
+                  <span class="material-symbols-outlined text-primary text-[20px]">aspect_ratio</span>
+                  <span class="text-xs font-medium">6.9" Super Retina XDR (120Hz)</span>
+                </div>
+                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container-low text-on-surface">
+                  <span class="material-symbols-outlined text-primary text-[20px]">speed</span>
+                  <span class="text-xs font-medium">A18 Pro 3nm Silicon</span>
+                </div>
+                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container-low text-on-surface">
+                  <span class="material-symbols-outlined text-primary text-[20px]">zoom_in</span>
+                  <span class="text-xs font-medium">5x Periscope Optical Zoom</span>
+                </div>
+                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container-low text-on-surface">
+                  <span class="material-symbols-outlined text-primary text-[20px]">battery_charging_full</span>
+                  <span class="text-xs font-medium">Up to 33 hrs Video Playback</span>
+                </div>
+              </div>
+
+              <!-- Color Swatches -->
+              <div class="mb-6">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-2">
+                  <span>Finishes</span>
+                  <span class="font-medium text-on-surface active-color-label">Natural Titanium</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <button class="color-swatch active w-6 h-6 rounded-full bg-[#bfb6a8] shadow-inner" data-color="Natural Titanium" title="Natural Titanium"></button>
+                  <button class="color-swatch w-6 h-6 rounded-full bg-[#c9ab93] shadow-inner" data-color="Desert Titanium" title="Desert Titanium"></button>
+                  <button class="color-swatch w-6 h-6 rounded-full bg-[#ecebe7] shadow-inner" data-color="White Titanium" title="White Titanium"></button>
+                  <button class="color-swatch w-6 h-6 rounded-full bg-[#3c3b3f] shadow-inner" data-color="Black Titanium" title="Black Titanium"></button>
+                </div>
+              </div>
+            </div>
+
+            <a href="#compare" class="inline-flex items-center justify-between w-full pt-4 border-t border-surface-container-highest text-primary hover:text-primary-hover text-xs font-semibold transition-colors">
+              <span>Detailed Comparison</span>
+              <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            </a>
+          </div>
+
+          <!-- Card 2: iPhone 16 Pro -->
+          <div class="phone-card group flex flex-col justify-between p-6 rounded-3xl card-elevated" data-category="pro">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-2.5 py-1 rounded-full bg-slate-200 text-secondary text-[11px] font-bold uppercase tracking-wider">Pro Pick</span>
+                <span class="text-xs font-semibold text-on-surface-variant">From $999</span>
+              </div>
+              <h3 class="text-xl font-bold text-on-surface mb-1">iPhone 16 Pro</h3>
+              <p class="text-xs text-on-surface-variant mb-6 leading-relaxed">Uncompromising Pro cameras in a hand-friendly form factor.</p>
+              
+              <div class="space-y-2 mb-6">
+                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container-low text-on-surface">
+                  <span class="material-symbols-outlined text-primary text-[20px]">touch_app</span>
+                  <span class="text-xs font-medium">6.3" 120Hz ProMotion OLED</span>
+                </div>
+                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container-low text-on-surface">
+                  <span class="material-symbols-outlined text-primary text-[20px]">shield</span>
+                  <span class="text-xs font-medium">Grade 5 Titanium Chassis</span>
+                </div>
+                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container-low text-on-surface">
+                  <span class="material-symbols-outlined text-primary text-[20px]">videocam</span>
+                  <span class="text-xs font-medium">4K 120fps Dolby Vision</span>
+                </div>
+                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container-low text-on-surface">
+                  <span class="material-symbols-outlined text-primary text-[20px]">battery_charging_full</span>
+                  <span class="text-xs font-medium">Up to 27 hrs Video Playback</span>
+                </div>
+              </div>
+
+              <!-- Color Swatches -->
+              <div class="mb-6">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-2">
+                  <span>Finishes</span>
+                  <span class="font-medium text-on-surface active-color-label">Natural Titanium</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <button class="color-swatch active w-6 h-6 rounded-full bg-[#bfb6a8] shadow-inner" data-color="Natural Titanium" title="Natural Titanium"></button>
+                  <button class="color-swatch w-6 h-6 rounded-full bg-[#c9ab93] shadow-inner" data-color="Desert Titanium" title="Desert Titanium"></button>
+                  <button class="color-swatch w-6 h-6 rounded-full bg-[#ecebe7] shadow-inner" data-color="White Titanium" title="White Titanium"></button>
+                  <button class="color-swatch w-6 h-6 rounded-full bg-[#3c3b3f] shadow-inner" data-color="Black Titanium" title="Black Titanium"></button>
+                </div>
+              </div>
+            </div>
+
+            <a href="#compare" class="inline-flex items-center justify-between w-full pt-4 border-t border-surface-container-highest text-primary hover:text-primary-hover text-xs font-semibold transition-colors">
+              <span>Detailed Comparison</span>
+              <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            </a>
+          </div>
+
+          <!-- Card 3: iPhone 16 Plus -->
+          <div class="phone-card group flex flex-col justify-between p-6 rounded-3xl card-elevated" data-category="standard">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold uppercase tracking-wider">Best Battery</span>
+                <span class="text-xs font-semibold text-on-surface-variant">From $899</span>
+              </div>
+              <h3 class="text-xl font-bold text-on-surface mb-1">iPhone 16 Plus</h3>
+              <p class="text-xs text-on-surface-variant mb-6 leading-relaxed">Expansive 6.7-inch display with effortless two-day battery life.</p>
+              
+              <div class="space-y-2 mb-6">
+                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container-low text-on-surface">
+                  <span class="material-symbols-outlined text-primary text-[20px]">smartphone</span>
+                  <span class="text-xs font-medium">6.7" Super Retina OLED (60Hz)</span>
+                </div>
+                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container-low text-on-surface">
+                  <span class="material-symbols-outlined text-primary text-[20px]">speed</span>
+                  <span class="text-xs font-medium">A18 Silicon (2nd Gen 3nm)</span>
+                </div>
+                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container-low text-on-surface">
+                  <span class="material-symbols-outlined text-primary text-[20px]">camera_enhance</span>
+                  <span class="text-xs font-medium">48MP 2-in-1 Fusion Camera</span>
+                </div>
+                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container-low text-on-surface">
+                  <span class="material-symbols-outlined text-primary text-[20px]">battery_charging_full</span>
+                  <span class="text-xs font-medium">Up to 27 hrs Video Playback</span>
+                </div>
+              </div>
+
+              <!-- Color Swatches -->
+              <div class="mb-6">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-2">
+                  <span>Finishes</span>
+                  <span class="font-medium text-on-surface active-color-label">Ultramarine</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <button class="color-swatch active w-6 h-6 rounded-full bg-[#395368] shadow-inner" data-color="Ultramarine" title="Ultramarine"></button>
+                  <button class="color-swatch w-6 h-6 rounded-full bg-[#82a39a] shadow-inner" data-color="Teal" title="Teal"></button>
+                  <button class="color-swatch w-6 h-6 rounded-full bg-[#dfa4b1] shadow-inner" data-color="Pink" title="Pink"></button>
+                  <button class="color-swatch w-6 h-6 rounded-full bg-[#ffffff] shadow-inner border border-black/10" data-color="White" title="White"></button>
+                  <button class="color-swatch w-6 h-6 rounded-full bg-[#202022] shadow-inner" data-color="Black" title="Black"></button>
+                </div>
+              </div>
+            </div>
+
+            <a href="#compare" class="inline-flex items-center justify-between w-full pt-4 border-t border-surface-container-highest text-primary hover:text-primary-hover text-xs font-semibold transition-colors">
+              <span>Detailed Comparison</span>
+              <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            </a>
+          </div>
+
+          <!-- Card 4: iPhone 16 -->
+          <div class="phone-card group flex flex-col justify-between p-6 rounded-3xl card-elevated" data-category="standard">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 text-[11px] font-bold uppercase tracking-wider">Compact Value</span>
+                <span class="text-xs font-semibold text-on-surface-variant">From $799</span>
+              </div>
+              <h3 class="text-xl font-bold text-on-surface mb-1">iPhone 16</h3>
+              <p class="text-xs text-on-surface-variant mb-6 leading-relaxed">Fresh design, Camera Control button, and Apple Intelligence.</p>
+              
+              <div class="space-y-2 mb-6">
+                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container-low text-on-surface">
+                  <span class="material-symbols-outlined text-primary text-[20px]">phone_iphone</span>
+                  <span class="text-xs font-medium">6.1" OLED Compact Size</span>
+                </div>
+                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container-low text-on-surface">
+                  <span class="material-symbols-outlined text-primary text-[20px]">photo_camera</span>
+                  <span class="text-xs font-medium">Action + Camera Control</span>
+                </div>
+                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container-low text-on-surface">
+                  <span class="material-symbols-outlined text-primary text-[20px]">palette</span>
+                  <span class="text-xs font-medium">New Photographic Styles</span>
+                </div>
+                <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container-low text-on-surface">
+                  <span class="material-symbols-outlined text-primary text-[20px]">battery_charging_full</span>
+                  <span class="text-xs font-medium">Up to 22 hrs Video Playback</span>
+                </div>
+              </div>
+
+              <!-- Color Swatches -->
+              <div class="mb-6">
+                <div class="flex items-center justify-between text-xs text-on-surface-variant mb-2">
+                  <span>Finishes</span>
+                  <span class="font-medium text-on-surface active-color-label">Teal</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <button class="color-swatch w-6 h-6 rounded-full bg-[#395368] shadow-inner" data-color="Ultramarine" title="Ultramarine"></button>
+                  <button class="color-swatch active w-6 h-6 rounded-full bg-[#82a39a] shadow-inner" data-color="Teal" title="Teal"></button>
+                  <button class="color-swatch w-6 h-6 rounded-full bg-[#dfa4b1] shadow-inner" data-color="Pink" title="Pink"></button>
+                  <button class="color-swatch w-6 h-6 rounded-full bg-[#ffffff] shadow-inner border border-black/10" data-color="White" title="White"></button>
+                  <button class="color-swatch w-6 h-6 rounded-full bg-[#202022] shadow-inner" data-color="Black" title="Black"></button>
+                </div>
+              </div>
+            </div>
+
+            <a href="#compare" class="inline-flex items-center justify-between w-full pt-4 border-t border-surface-container-highest text-primary hover:text-primary-hover text-xs font-semibold transition-colors">
+              <span>Detailed Comparison</span>
+              <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: TECHNOLOGY DEEP DIVE -->
+    <section class="w-full py-space-3xl px-margin md:px-margin-md lg:px-margin-lg bg-surface-container-lowest border-y border-black/5" id="technology">
+      <div class="max-w-7xl mx-auto space-y-24">
+        
+        <!-- Header -->
+        <div class="text-center max-w-2xl mx-auto">
+          <span class="text-xs font-bold uppercase tracking-widest text-primary">Precision Engineering</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-on-surface tracking-tight mt-1">
+            Breakthrough silicon & optics.
+          </h2>
+          <p class="text-base text-on-surface-variant mt-2">
+            Every millimeter is crafted to eliminate boundaries between capture, compute, and display.
+          </p>
+        </div>
+
+        <!-- Tech Block 1: Camera System -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-black/5 bg-black order-2 lg:order-1 group">
+            <img 
+              src="images/camera-system.png" 
+              alt="Triple Camera Macro Sapphire Optics System" 
+              class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-black/60 backdrop-blur-md text-white border border-white/10">
+              <span class="text-xs uppercase tracking-wider text-blue-400 font-bold">Optics Architecture</span>
+              <p class="text-sm font-medium mt-0.5">Sapphire crystal lens covers with 2nd-gen anti-reflective coating.</p>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-primary text-xs font-semibold">
+              <span class="material-symbols-outlined text-[16px]">photo_camera</span>
+              <span>Pro Camera Innovations</span>
+            </div>
+            <h3 class="text-3xl md:text-4xl font-bold tracking-tight text-on-surface">
+              48MP Quad-Pixel sensor with 5x tetraprism optical range.
+            </h3>
+            <p class="text-base text-on-surface-variant leading-relaxed">
+              The revolutionary camera architecture integrates a second-generation sensor-shift optical image stabilization module. Capture zero-shutter-lag 48MP ProRAW photos, 4K 120fps cinematic Dolby Vision, and studio-grade Audio Mix with studio mics.
+            </p>
+            <div class="grid grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-2xl bg-surface-container-low border border-black/5">
+                <span class="text-2xl font-bold text-on-surface">48MP</span>
+                <p class="text-xs text-on-surface-variant mt-1">Quad-pixel sensor with 2.44µm quad pixels</p>
+              </div>
+              <div class="p-4 rounded-2xl bg-surface-container-low border border-black/5">
+                <span class="text-2xl font-bold text-on-surface">120 fps</span>
+                <p class="text-xs text-on-surface-variant mt-1">4K Dolby Vision video in ProRes or Log</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Block 2: A18 Pro Chip -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold">
+              <span class="material-symbols-outlined text-[16px]">memory</span>
+              <span>Silicon Architecture</span>
+            </div>
+            <h3 class="text-3xl md:text-4xl font-bold tracking-tight text-on-surface">
+              A18 Pro. The fastest chip ever in a smartphone.
+            </h3>
+            <p class="text-base text-on-surface-variant leading-relaxed">
+              Built on 2nd-generation 3-nanometer transistor architecture, A18 Pro boasts smaller, faster transistors for unprecedented efficiency. The 16-core Neural Engine processes Apple Intelligence locally on device with absolute privacy and zero latency.
+            </p>
+            <div class="grid grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-2xl bg-surface-container-low border border-black/5">
+                <span class="text-2xl font-bold text-on-surface">16 Cores</span>
+                <p class="text-xs text-on-surface-variant mt-1">Neural Engine for generative on-device AI</p>
+              </div>
+              <div class="p-4 rounded-2xl bg-surface-container-low border border-black/5">
+                <span class="text-2xl font-bold text-on-surface">2x Faster</span>
+                <p class="text-xs text-on-surface-variant mt-1">Hardware ray tracing vs A17 Pro</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-black/5 bg-black group">
+            <img 
+              src="images/bionic-chip.png" 
+              alt="A18 Pro Silicon Bionic Chip Glowing Microarchitecture" 
+              class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-black/60 backdrop-blur-md text-white border border-white/10">
+              <span class="text-xs uppercase tracking-wider text-amber-400 font-bold">3nm Process</span>
+              <p class="text-sm font-medium mt-0.5">High-bandwidth memory subsystem powering console gaming.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: SIDE-BY-SIDE COMPARISON TABLE -->
+    <section class="w-full py-space-3xl px-margin md:px-margin-md lg:px-margin-lg bg-surface-container-low" id="compare">
+      <div class="max-w-6xl mx-auto">
+        
+        <!-- Header & Difference Toggle -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-primary">Head to Head Matrix</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-on-surface tracking-tight mt-1">
+              Compare side by side.
+            </h2>
+            <p class="text-sm md:text-base text-on-surface-variant mt-1">
+              Find the exact boundary between Pro performance and everyday perfection.
+            </p>
+          </div>
+          
+          <!-- Highlight Differences Toggle -->
+          <div class="flex items-center gap-3 bg-white px-4 py-2 rounded-full shadow-sm border border-black/5 self-start md:self-auto">
+            <span class="text-xs font-semibold text-on-surface">Highlight Differences</span>
+            <button id="toggle-diff" class="w-11 h-6 rounded-full bg-surface-container-high transition-colors relative focus:outline-none" role="switch" aria-checked="false">
+              <span class="block w-5 h-5 rounded-full bg-white shadow-md transform transition-transform translate-x-0.5"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Comparison Table Card -->
+        <div class="bg-surface-container-lowest rounded-3xl shadow-xl border border-black/5 overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-surface-container-high bg-surface-container-low/70">
+                  <th class="p-5 font-semibold text-xs uppercase tracking-wider text-on-surface-variant w-1/5">Features & Specs</th>
+                  <th class="p-5 font-bold text-sm text-on-surface text-center w-1/5">
+                    <span class="block text-primary text-xs uppercase font-bold tracking-widest">Flagship</span>
+                    iPhone 16 Pro Max
+                    <span class="block text-xs font-normal text-on-surface-variant mt-0.5">From $1,199</span>
+                  </th>
+                  <th class="p-5 font-bold text-sm text-on-surface text-center w-1/5">
+                    <span class="block text-secondary text-xs uppercase font-bold tracking-widest">Pro Pick</span>
+                    iPhone 16 Pro
+                    <span class="block text-xs font-normal text-on-surface-variant mt-0.5">From $999</span>
+                  </th>
+                  <th class="p-5 font-bold text-sm text-on-surface text-center w-1/5">
+                    <span class="block text-emerald-700 text-xs uppercase font-bold tracking-widest">Battery King</span>
+                    iPhone 16 Plus
+                    <span class="block text-xs font-normal text-on-surface-variant mt-0.5">From $899</span>
+                  </th>
+                  <th class="p-5 font-bold text-sm text-on-surface text-center w-1/5">
+                    <span class="block text-amber-700 text-xs uppercase font-bold tracking-widest">Compact</span>
+                    iPhone 16
+                    <span class="block text-xs font-normal text-on-surface-variant mt-0.5">From $799</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-surface-container-high text-xs md:text-sm">
+                
+                <!-- Row: Display Size & Tech -->
+                <tr class="compare-row hover:bg-surface/50 transition-colors" data-diff="true">
+                  <td class="p-5 font-semibold text-on-surface-variant">Display Size & Technology</td>
+                  <td class="p-5 text-center font-medium text-on-surface">6.9″ Super Retina XDR OLED</td>
+                  <td class="p-5 text-center font-medium text-on-surface">6.3″ Super Retina XDR OLED</td>
+                  <td class="p-5 text-center font-medium text-on-surface">6.7″ Super Retina XDR OLED</td>
+                  <td class="p-5 text-center font-medium text-on-surface">6.1″ Super Retina XDR OLED</td>
+                </tr>
+
+                <!-- Row: ProMotion 120Hz -->
+                <tr class="compare-row hover:bg-surface/50 transition-colors" data-diff="true">
+                  <td class="p-5 font-semibold text-on-surface-variant">Refresh Rate</td>
+                  <td class="p-5 text-center font-bold text-primary">120Hz ProMotion + Always-On</td>
+                  <td class="p-5 text-center font-bold text-primary">120Hz ProMotion + Always-On</td>
+                  <td class="p-5 text-center text-on-surface-variant">60Hz Standard</td>
+                  <td class="p-5 text-center text-on-surface-variant">60Hz Standard</td>
+                </tr>
+
+                <!-- Row: Processor Chip -->
+                <tr class="compare-row hover:bg-surface/50 transition-colors" data-diff="true">
+                  <td class="p-5 font-semibold text-on-surface-variant">Processor Silicon</td>
+                  <td class="p-5 text-center font-bold text-on-surface">A18 Pro (6-core GPU)</td>
+                  <td class="p-5 text-center font-bold text-on-surface">A18 Pro (6-core GPU)</td>
+                  <td class="p-5 text-center text-on-surface font-medium">A18 (5-core GPU)</td>
+                  <td class="p-5 text-center text-on-surface font-medium">A18 (5-core GPU)</td>
+                </tr>
+
+                <!-- Row: Apple Intelligence -->
+                <tr class="compare-row hover:bg-surface/50 transition-colors" data-diff="false">
+                  <td class="p-5 font-semibold text-on-surface-variant">Apple Intelligence Support</td>
+                  <td class="p-5 text-center font-semibold text-emerald-600">✓ Full Support (8GB RAM)</td>
+                  <td class="p-5 text-center font-semibold text-emerald-600">✓ Full Support (8GB RAM)</td>
+                  <td class="p-5 text-center font-semibold text-emerald-600">✓ Full Support (8GB RAM)</td>
+                  <td class="p-5 text-center font-semibold text-emerald-600">✓ Full Support (8GB RAM)</td>
+                </tr>
+
+                <!-- Row: Rear Camera -->
+                <tr class="compare-row hover:bg-surface/50 transition-colors" data-diff="true">
+                  <td class="p-5 font-semibold text-on-surface-variant">Rear Camera System</td>
+                  <td class="p-5 text-center font-medium text-on-surface">Pro 48MP Triple Camera (Macro)</td>
+                  <td class="p-5 text-center font-medium text-on-surface">Pro 48MP Triple Camera (Macro)</td>
+                  <td class="p-5 text-center font-medium text-on-surface">48MP Dual Fusion Camera</td>
+                  <td class="p-5 text-center font-medium text-on-surface">48MP Dual Fusion Camera</td>
+                </tr>
+
+                <!-- Row: Optical Zoom -->
+                <tr class="compare-row hover:bg-surface/50 transition-colors" data-diff="true">
+                  <td class="p-5 font-semibold text-on-surface-variant">Optical Zoom Telephoto</td>
+                  <td class="p-5 text-center font-bold text-primary">5x Optical Zoom (120mm)</td>
+                  <td class="p-5 text-center font-bold text-primary">5x Optical Zoom (120mm)</td>
+                  <td class="p-5 text-center text-on-surface-variant">2x In-Sensor Crop</td>
+                  <td class="p-5 text-center text-on-surface-variant">2x In-Sensor Crop</td>
+                </tr>
+
+                <!-- Row: Camera Control Button -->
+                <tr class="compare-row hover:bg-surface/50 transition-colors" data-diff="false">
+                  <td class="p-5 font-semibold text-on-surface-variant">Camera Control & Action Button</td>
+                  <td class="p-5 text-center font-semibold text-emerald-600">✓ Both Dedicated Keys</td>
+                  <td class="p-5 text-center font-semibold text-emerald-600">✓ Both Dedicated Keys</td>
+                  <td class="p-5 text-center font-semibold text-emerald-600">✓ Both Dedicated Keys</td>
+                  <td class="p-5 text-center font-semibold text-emerald-600">✓ Both Dedicated Keys</td>
+                </tr>
+
+                <!-- Row: Battery Video Playback -->
+                <tr class="compare-row hover:bg-surface/50 transition-colors" data-diff="true">
+                  <td class="p-5 font-semibold text-on-surface-variant">Battery Life (Video)</td>
+                  <td class="p-5 text-center font-bold text-on-surface">Up to 33 hours</td>
+                  <td class="p-5 text-center font-medium text-on-surface">Up to 27 hours</td>
+                  <td class="p-5 text-center font-bold text-emerald-700">Up to 27 hours</td>
+                  <td class="p-5 text-center font-medium text-on-surface">Up to 22 hours</td>
+                </tr>
+
+                <!-- Row: Chassis Material -->
+                <tr class="compare-row hover:bg-surface/50 transition-colors" data-diff="true">
+                  <td class="p-5 font-semibold text-on-surface-variant">Chassis Build & Material</td>
+                  <td class="p-5 text-center font-semibold text-on-surface">Grade 5 Titanium</td>
+                  <td class="p-5 text-center font-semibold text-on-surface">Grade 5 Titanium</td>
+                  <td class="p-5 text-center text-on-surface-variant">Aerospace Aluminum</td>
+                  <td class="p-5 text-center text-on-surface-variant">Aerospace Aluminum</td>
+                </tr>
+
+                <!-- Row: Base Storage -->
+                <tr class="compare-row hover:bg-surface/50 transition-colors" data-diff="true">
+                  <td class="p-5 font-semibold text-on-surface-variant">Base Storage Tier</td>
+                  <td class="p-5 text-center font-semibold text-on-surface">256 GB</td>
+                  <td class="p-5 text-center font-medium text-on-surface">128 GB</td>
+                  <td class="p-5 text-center font-medium text-on-surface">128 GB</td>
+                  <td class="p-5 text-center font-medium text-on-surface">128 GB</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: BUYER'S FAQ ACCORDION -->
+    <section class="w-full py-space-3xl px-margin md:px-margin-md lg:px-margin-lg bg-surface" id="faq">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-space-2xl">
+          <span class="text-xs font-bold uppercase tracking-widest text-primary">Informed Decisions</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-on-surface tracking-tight mt-1">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-sm md:text-base text-on-surface-variant mt-1">
+            Answers curated by our independent review team.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          
+          <!-- FAQ Item 1 -->
+          <div class="faq-item rounded-2xl bg-white border border-black/5 overflow-hidden shadow-sm">
+            <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="font-semibold text-base text-on-surface">Is upgrading to the iPhone 16 Pro worth it over the iPhone 15 Pro?</span>
+              <span class="material-symbols-outlined text-primary text-[24px] transform transition-transform faq-icon">expand_more</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-sm text-on-surface-variant leading-relaxed border-t border-surface-container-high/60 pt-4">
+              If you own an iPhone 15 Pro, the key upgrades are the larger displays (6.3″ and 6.9″ with thinner borders), 5x optical zoom on both sizes (previously only on Pro Max), the dedicated sapphire Camera Control button, and thermal architectural improvements that reduce throttling during 4K 120fps recording. If you own an iPhone 14 Pro or older, the jump in weight reduction, battery life, USB-C 3 speeds, and Apple Intelligence performance is substantial.
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item rounded-2xl bg-white border border-black/5 overflow-hidden shadow-sm">
+            <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="font-semibold text-base text-on-surface">How does the new Camera Control button work?</span>
+              <span class="material-symbols-outlined text-primary text-[24px] transform transition-transform faq-icon">expand_more</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-sm text-on-surface-variant leading-relaxed border-t border-surface-container-high/60 pt-4">
+              Camera Control is a multi-functional flush key engineered with a tactile click switch, a capacitive force sensor for light presses, and a touch sensor for slide gestures. A light press reveals quick controls like zoom, exposure, and depth of field, while sliding across adjusts framing in real time. A full click captures a photo, and holding down records video.
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item rounded-2xl bg-white border border-black/5 overflow-hidden shadow-sm">
+            <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="font-semibold text-base text-on-surface">Can standard iPhone 16 models run Apple Intelligence?</span>
+              <span class="material-symbols-outlined text-primary text-[24px] transform transition-transform faq-icon">expand_more</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-sm text-on-surface-variant leading-relaxed border-t border-surface-container-high/60 pt-4">
+              Yes! Unlike previous generations where non-Pro models were limited, both iPhone 16 and iPhone 16 Plus are equipped with the A18 chip and 8GB of unified memory, fully supporting on-device Apple Intelligence features including Writing Tools, Clean Up in Photos, prioritized notifications, and next-gen Siri.
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item rounded-2xl bg-white border border-black/5 overflow-hidden shadow-sm">
+            <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="font-semibold text-base text-on-surface">Should I choose 128GB or 256GB storage?</span>
+              <span class="material-symbols-outlined text-primary text-[24px] transform transition-transform faq-icon">expand_more</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-sm text-on-surface-variant leading-relaxed border-t border-surface-container-high/60 pt-4">
+              Note that the iPhone 16 Pro Max starts at 256GB automatically. For the 16 Pro, 16 Plus, and 16, we recommend 256GB if you shoot 48MP ProRAW photos, record 4K 60fps/120fps video, or plan to keep the device for 3+ years. 128GB is adequate if you use iCloud Photos and stream media.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-low border-t border-black/5 text-on-surface-variant">
+    <div class="max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg pt-16 pb-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+        <div>
+          <h4 class="text-xs font-bold text-on-surface uppercase tracking-wider mb-4">Lineup</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#models" class="hover:text-primary transition-colors">iPhone 16 Pro Max</a></li>
+            <li><a href="#models" class="hover:text-primary transition-colors">iPhone 16 Pro</a></li>
+            <li><a href="#models" class="hover:text-primary transition-colors">iPhone 16 Plus</a></li>
+            <li><a href="#models" class="hover:text-primary transition-colors">iPhone 16</a></li>
+            <li><a href="#models" class="hover:text-primary transition-colors">iPhone 15 & SE</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-on-surface uppercase tracking-wider mb-4">Tools & Compare</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#compare" class="hover:text-primary transition-colors">Matrix Comparison</a></li>
+            <li><a href="#models" class="hover:text-primary transition-colors">Lineup Filter</a></li>
+            <li><a href="#technology" class="hover:text-primary transition-colors">Camera Sensor Breakdown</a></li>
+            <li><a href="#technology" class="hover:text-primary transition-colors">A18 Pro Silicon Architecture</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-on-surface uppercase tracking-wider mb-4">Buying Guide</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#faq" class="hover:text-primary transition-colors">Storage Recommendations</a></li>
+            <li><a href="#faq" class="hover:text-primary transition-colors">Trade-In Value Guide</a></li>
+            <li><a href="#faq" class="hover:text-primary transition-colors">Pro vs Standard Decision</a></li>
+            <li><a href="#faq" class="hover:text-primary transition-colors">Carrier vs Unlocked</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-on-surface uppercase tracking-wider mb-4">Editorial</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-primary transition-colors">Testing Methodology</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Editorial Standards</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Affiliate Transparency</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Submit a Correction</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-on-surface uppercase tracking-wider mb-4">Legal</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Trademark Notice</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Disclaimer Box -->
+      <div class="p-4 rounded-2xl bg-white border border-black/5 mb-8">
+        <p class="text-xs text-on-surface-variant leading-relaxed">
+          <strong class="text-on-surface">Independent Publication:</strong> NovaPhone Guide is an independent consumer comparison guide and is not affiliated with, endorsed by, or sponsored by Apple Inc. iPhone, Dynamic Island, Super Retina XDR, ProMotion, MagSafe, and Apple Intelligence are registered trademarks of Apple Inc.
+        </p>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-surface-container-high/50 text-xs">
+        <div>
+          <span>© 2025 NovaPhone Guide. All rights reserved.</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-on-surface-variant hover:text-primary transition-colors">Twitter / X</a>
+          <a href="#" class="text-on-surface-variant hover:text-primary transition-colors">YouTube</a>
+          <a href="#" class="text-on-surface-variant hover:text-primary transition-colors">RSS Feed</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE SCRIPTS -->
+  <script>
+    // 1. Models Filter functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const phoneCards = document.querySelectorAll('.phone-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        // Style active button
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-white', 'text-on-surface', 'shadow-sm', 'font-semibold');
+          b.classList.add('text-on-surface-variant');
+        });
+        btn.classList.add('bg-white', 'text-on-surface', 'shadow-sm', 'font-semibold');
+        btn.classList.remove('text-on-surface-variant');
+
+        // Filter cards
+        phoneCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // 2. Color Swatch Interactivity
+    const phoneCardElements = document.querySelectorAll('.phone-card');
+    phoneCardElements.forEach(card => {
+      const swatches = card.querySelectorAll('.color-swatch');
+      const label = card.querySelector('.active-color-label');
+
+      swatches.forEach(swatch => {
+        swatch.addEventListener('click', () => {
+          swatches.forEach(s => s.classList.remove('active'));
+          swatch.classList.add('active');
+          if (label) {
+            label.textContent = swatch.getAttribute('data-color');
+          }
+        });
+      });
+    });
+
+    // 3. Highlight Differences Toggle
+    const diffToggle = document.getElementById('toggle-diff');
+    let diffOnly = false;
+
+    if (diffToggle) {
+      diffToggle.addEventListener('click', () => {
+        diffOnly = !diffOnly;
+        diffToggle.setAttribute('aria-checked', diffOnly.toString());
+        const knob = diffToggle.querySelector('span');
+
+        if (diffOnly) {
+          diffToggle.classList.remove('bg-surface-container-high');
+          diffToggle.classList.add('bg-primary-container');
+          knob.classList.remove('translate-x-0.5');
+          knob.classList.add('translate-x-5');
+        } else {
+          diffToggle.classList.remove('bg-primary-container');
+          diffToggle.classList.add('bg-surface-container-high');
+          knob.classList.remove('translate-x-5');
+          knob.classList.add('translate-x-0.5');
+        }
+
+        // Dim or undim rows that don't differ
+        const rows = document.querySelectorAll('.compare-row');
+        rows.forEach(row => {
+          const isDiff = row.getAttribute('data-diff') === 'true';
+          if (diffOnly && !isDiff) {
+            row.classList.add('diff-dimmed');
+          } else {
+            row.classList.remove('diff-dimmed');
+          }
+        });
+      });
+    }
+
+    // 4. FAQ Accordion Toggle
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    faqToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const content = toggle.nextElementSibling;
+        const icon = toggle.querySelector('.faq-icon');
+        const isOpen = !content.classList.contains('hidden');
+
+        if (isOpen) {
+          content.classList.add('hidden');
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          content.classList.remove('hidden');
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
